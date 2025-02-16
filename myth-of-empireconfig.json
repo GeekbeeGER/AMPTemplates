@@ -1,0 +1,73 @@
+[
+    {
+        "DisplayName": "Server name",
+        "Category": "",
+        "Description": "Sets the name of the server as displayed on the in-game MOE server browser.",
+        "Keywords": "server,name",
+        "FieldName": "Servername",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "Servername",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max players",
+        "Category": "Server Settings",
+        "Description": "The maximum amount of players who can be connected to the server at once.",
+        "Keywords": "max,players",
+        "FieldName": "Max players",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "Max players",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "PvP or PvE mode",
+        "Category": "Server Settings",
+        "Description": "Set this option to one of the following settings:  1 - PvP is enabled 0 - PvP is disabled (PvE mode)",
+        "Keywords": "pvp,or,pve,mode",
+        "FieldName": "PvP or PvE",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "PvP or PvE",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {
+            "true": "True",
+            "false": "False"
+        }
+    },
+    {
+        "DisplayName": "ServerPassword",
+        "Category": "Server Settings",
+        "Description": "Sets a password to connect to your server, and also makes it private.",
+        "Keywords": "serverpassword",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerPassword",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    }
+]
