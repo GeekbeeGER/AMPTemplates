@@ -1,0 +1,12 @@
+[
+    {
+        "ConfigFile": "$Server_Dir$\\Citadel\\Saved\\Config\\WindowsServer\\engine.ini",
+        "ConfigType": "ini",
+        "AutoMap": true
+    },
+    {
+        "ConfigFile": "$Server_Dir$\\Citadel\\Saved\\Config\\WindowsServer\\game.ini",
+        "ConfigType": "ini",
+        "AutoMap": true
+    }
+]
