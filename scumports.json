@@ -1,0 +1,30 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": "8889",
+        "Name": "Main Game Port",
+        "Description": "Port used for main game traffic",
+        "Ref": "MainGamePort"
+    },
+    {
+        "Protocol": "Both",
+        "Port": "9999",
+        "Name": "Server Response Port",
+        "Description": "Port used for main game traffic",
+        "Ref": "ServerResponsePort"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": "28215",
+        "Name": "Steam Query Port",
+        "Description": "Port used for main game traffic",
+        "Ref": "SteamQueryPort"
+    },
+    {
+        "Protocol": "Both",
+        "Port": "28200",
+        "Name": "Connection Port",
+        "Description": "Port used for main game traffic",
+        "Ref": "ConnectionPort"
+    }
+]
