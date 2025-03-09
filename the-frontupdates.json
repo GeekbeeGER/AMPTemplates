@@ -1,6 +1,6 @@
 [
     {
-        "UpdateStageName": "",
+        "UpdateStageName": "Server Files",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2612550",
@@ -8,6 +8,17 @@
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "ForceDownloadPlatform": "Windows",
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Start",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "StartApplication",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": true,
         "OneShot": false
     }
