@@ -1,26 +1,12 @@
 [
     {
-        "UpdateStageName": "Serverfiles Linux",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateStageName": "Serverfiles Linux/Windows",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "950902",
+        "UpdateSourceData": "950900",
         "UpdateSourceArgs": "736590",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
-        "ForceDownloadPlatform": "Linux",
-        "UpdateSourceConditionValue": "true",
-        "DeleteAfterExtract": true,
-        "OneShot": false
-    },
-    {
-        "UpdateStageName": "Serverfiles Windows",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "950901",
-        "UpdateSourceArgs": "736590",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "ForceDownloadPlatform": "Windows",
         "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": true,
         "OneShot": false
