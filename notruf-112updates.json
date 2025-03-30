@@ -9,6 +9,6 @@
         "OverwriteExistingFiles": false,
         "ForceDownloadPlatform": "Linux",
         "DeleteAfterExtract": true,
-        "OneShot": false
+        "OneShot": true
     }
 ]
