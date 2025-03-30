@@ -1,0 +1,7 @@
+[
+    {
+        "ConfigFile": "serverConfig",
+        "ConfigType": "xml",
+        "AutoMap": true
+    }
+]
