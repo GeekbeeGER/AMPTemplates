@@ -1,0 +1,14 @@
+[
+    {
+        "UpdateStageName": "Link",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateSymlink",
+        "UpdateSourceData": "/home/amp/.ampdata/instances/CallofDuty201/call-of-duty-2/serverfiles",
+        "UpdateSourceArgs": "/home/amp/.ampdata/instances/CallofDuty201/call-of-duty-2/rawfiles",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]
