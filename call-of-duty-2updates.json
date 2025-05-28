@@ -1,0 +1,14 @@
+[
+    {
+        "UpdateStageName": "Serverfiles Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "http://linuxgsm.download/CallOfDuty2/cod2-lnxded-1.3-full.tar.xz",
+        "UpdateSourceTarget": "serverfiles",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]
