@@ -1,0 +1,36 @@
+[
+    {
+        "UpdateStageName": "Serverfiles Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://play-ground.li/files/cod2-lnxded-1.3-full.zip",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Server Start",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "cod2_lnxded",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Config File Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/GeekbeeGER/AMPTemplates/refs/heads/main/server.cfg",
+        "UpdateSourceTarget": "/main/",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    }
+]
