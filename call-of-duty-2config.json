@@ -18,7 +18,7 @@
     },
     {
         "DisplayName": "RCON Password",
-        "Category": "Administration",
+        "Category": "General Settings",
         "Description": "The password to remotely control the server console. Keep this secret!",
         "Keywords": "rcon,password",
         "FieldName": "rcon_password",
@@ -52,7 +52,7 @@
     },
     {
         "DisplayName": "Game Type",
-        "Category": "Gameplay",
+        "Category": "General Settings",
         "Description": "Select the default game mode for the server.",
         "Keywords": "game,type",
         "FieldName": "g_gametype",

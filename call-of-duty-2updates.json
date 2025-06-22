@@ -15,7 +15,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/GeekbeeGER/AMPTemplates/refs/heads/main/server.cfg",
-        "UpdateSourceTarget": "main/server.cfg",
+        "UpdateSourceTarget": "serverfiles/main/server.cfg",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false,
