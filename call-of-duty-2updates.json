@@ -1,23 +1,17 @@
 [
     {
-        "UpdateStageName": "Download CoD2-Archiv",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
-        "UpdateSourceTarget": "cod2.zip",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
+        "Name": "1. Download CoD2-Archiv",
+        "Source": "FetchURL",
+        "Data": "https://play-ground.li/files/cod2.zip",
+        "Target": "cod2.zip",
         "OneShot": true
     },
     {
-        "UpdateStageName": "Entpacke CoD2-Archiv",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceArgs": "cod2.zip",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
+        "Name": "2. Entpacke CoD2-Archiv",
+        "Source": "ExtractArchive",
+        "Data": "cod2.zip",
+        "Target": "",
+        "OneShot": true,
+        "DeleteAfterExtract": true
     }
 ]
