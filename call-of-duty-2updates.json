@@ -1,0 +1,12 @@
+[
+    {
+        "UpdateStageName": "Erstinstallation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceArgs": "https://play-ground.li/files/cod2.zip",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": true
+    }
+]
