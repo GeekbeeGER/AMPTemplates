@@ -1,0 +1,33 @@
+[
+    {
+        "UpdateStageName": "Download CoD2-Archiv",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": true
+    },
+    {
+        "UpdateStageName": "Kopiere System-Bibliothek",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "libstdc++.so.5",
+        "UpdateSourceArgs": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": true
+    },
+    {
+        "UpdateStageName": "Executable",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "cod2_lnxded",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]
