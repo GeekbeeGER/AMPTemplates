@@ -1,75 +1,60 @@
 Meta.DisplayName=Call of Duty 2
 Meta.Description=Call of Duty 2 - Dedicated Server
 Meta.Arch=x86_64
-Meta.Author=GeekbeeGER
-Meta.URL=https://store.steampowered.com/app/2630/Call_of_Duty_2/
+Meta.Author=GeekbeeGER - Made with AMP Config Generator
+Meta.URL=https://store.steampowered.com/app/2630/Call_of_Duty_2
 Meta.MinAMPVersion=2.4.6.6
 Meta.SpecificDockerImage=
 Meta.DockerRequired=False
 Meta.ContainerPolicy=Supported
 Meta.ContainerPolicyReason=
 Meta.Prerequsites=[]
-# KORREKTUR: Der Connect-Link muss den GamePort (UDP) verwenden, nicht einen SteamQueryPort.
-Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$GamePort1}
-Meta.AppConfigId=f7c8ab42-f8df-4a59-92d1-21daad02eaad
-
-# Applikations-Verhalten
+Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
+Meta.AppConfigId=d9ae03ad-d5fa-40b9-a577-a3fd9316649e
 App.AdminMethod=STDIO
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Call of Duty 2
-# KORREKTUR: Start-Argument vervollständigt.
-App.CommandLineArgs=+set dedicated 2 +set net_ip {{$IPBinding}} +set net_port {{$ApplicationPort1}} +exec server.cfg +map_rotate
+App.CommandLineArgs=+set dedicated 2 +set net_ip {{$IPBinding}} +set net_port {{$ApplicationPort1}} +exec server.cfg +map_rotat
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
 App.RapidStartup=false
-# KORREKTUR: Der Server ist bereit, wenn die Map geladen wurde.
-App.ApplicationReadyMode=Regex
-Console.AppReadyRegex=--- LoadMap\(mp_.+\) ---
+App.ApplicationReadyMode=Immediate
 App.ExitMethod=String
 App.ExitString=quit
 App.ExitTimeout=30
 App.ExitFile=app_exit.lck
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
-
-# Netzwerk-Einstellungen
 App.ApplicationIPBinding=0.0.0.0
-App.AdminPortRef=
+App.AdminPortRef=RemoteAdminPort
 App.UniversalSleepApplicationUDPPortRef=GamePort1
 App.PrimaryApplicationPortRef=GamePort1
-App.UniversalSleepSteamQueryPortRef=
+App.UniversalSleepSteamQueryPortRef=SteamQueryPort
 App.MaxUsers=8
-
-# Passwort- & RCON-Einstellungen
 App.UseRandomAdminPassword=True
 App.RemoteAdminPassword=
 App.AdminLoginTransform=None
 App.RCONConnectDelaySeconds=30
 App.RCONConnectRetrySeconds=15
-App.RCONHeartbeatCommand=
+App.RCONHeartbeatCommand=ping
 App.RCONHeartbeatMinutes=0
 App.TelnetLoginFormat={0}
-
-# Update- & Sleep-Einstellungen
 App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.TemplateMatchRegex={{(\$?[\w]+)}}
-
-# Prozess- & Konsolen-Einstellungen
 App.MonitorChildProcess=False
 App.MonitorChildProcessWaitMs=1000
 App.MonitorChildProcessName=
 App.Compatibility=None
-App.SteamWorkshopDownloadLocation=
+App.SteamWorkshopDownloadLocation={{$FullBaseDir}}undefined
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
-# KORREKTUR: Blendet störende Shader-Warnungen in der Konsole aus.
-Console.ThrowawayMessageRegex=(?i)(WARNING|ERROR): Shader .+
-Console.UpdateAvailableRegex=
+Console.ThrowawayMessageRegex=(WARNING|ERROR): Shader.+
+Console.UpdateAvailableRegex=^\[\d\d:\d\d:\d\d\] \[INFO\] A new server update is available! v[\d\.]+.$
 Console.SuppressLogAtStart=False
 Console.ActivateLogRegex=
 Console.UserActions={}
@@ -79,32 +64,21 @@ Console.SleepDelayMinutes=5
 Console.DozeDelay=2
 Console.AutoRetryCount=5
 Console.SleepStartThresholdSeconds=25
-Console.UserJoinRegex=
-Console.UserLeaveRegex=
-Console.UserChatRegex=
-
-# Meta- & Dateisystem-Konfiguration
+Console.AppReadyRegex=^$
+Console.UserJoinRegex=^$
+Console.UserLeaveRegex=^$
+Console.UserChatRegex=^$
 Meta.OS=2
 Meta.ConfigManifest=call-of-duty-2config.json
 Meta.MetaConfigManifest=call-of-duty-2metaconfig.json
 Meta.ConfigRoot=call-of-duty-2.kvp
-Meta.DisplayImageSource=url:https://cdn.getamp.sh/images/generic-game-icon-2.png
-
-# --- KORREKTE PFAD-KONFIGURATION ---
-# 1. Haupt-Unterordner für die Anwendung
 App.RootDir=./call-of-duty-2/
-# 2. Dieses Feld nicht manuell setzen
-App.BaseDirectory=
-# 3. Arbeitsverzeichnis ist der Ordner, der nach dem Entpacken existiert
-App.WorkingDir=cod2-lnxded-1.3-full
-# 4. Windows-EXE (für uns unwichtig)
-App.ExecutableWin=cod2_mp_server.exe
-# 5. Linux-EXE (relativ zum WorkingDir)
-App.ExecutableLinux=cod2_lnxded
+Meta.DisplayImageSource=url:https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2630/header.jpg
+App.BaseDirectory=./call-of-duty-2/serverfiles/
+App.WorkingDir=serverfiles
+App.ExecutableWin=serverfiles\
+App.ExecutableLinux=serverfiles/./cod2_lnxded
 App.LinuxCommandLineArgs=
-
-# Externe JSON-Dateien
 App.Ports=@IncludeJson[call-of-duty-2ports.json]
 App.UpdateSources=@IncludeJson[call-of-duty-2updates.json]
-# KORREKTUR: WINE-Variablen sind nicht nötig und wurden entfernt.
-App.EnvironmentVariables={}
+App.EnvironmentVariables={"LD_LIBRARY_PATH": "{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%", "WINEPREFIX": "{{$FullRootDir}}.wine", "WINEARCH": "win64", "WINEDEBUG": "-all"}

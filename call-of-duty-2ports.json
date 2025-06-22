@@ -2,8 +2,8 @@
     {
         "Protocol": "UDP",
         "Port": "28960",
-        "Name": "Main Game Port",
+        "Name": "Game Port",
         "Description": "Port used for main game traffic",
-        "Ref": "MainGamePort"
+        "Ref": "GamePort"
     }
 ]
