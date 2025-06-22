@@ -1,7 +1,7 @@
 [
     {
-        "ConfigFile": "serverfiles/main/server.cfg",
-        "ConfigType": "",
+        "ConfigFile": "main/server.cfg",
+        "ConfigType": "Generic",
         "AutoMap": false
     }
 ]
