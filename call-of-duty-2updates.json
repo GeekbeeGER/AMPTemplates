@@ -12,7 +12,7 @@
         "UpdateStageName": "Make Executable",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "serverfiles/cod2_lnxded",
+        "UpdateSourceArgs": "cod2_lnxded",
         "UnzipUpdateSource": false
     }
 ]
