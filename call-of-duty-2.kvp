@@ -81,4 +81,4 @@ App.ExecutableLinux=cod2_lnxded
 App.LinuxCommandLineArgs=
 App.Ports=@IncludeJson[call-of-duty-2ports.json]
 App.UpdateSources=@IncludeJson[call-of-duty-2updates.json]
-App.EnvironmentVariables={} # <<<< HIER den Inhalt geleert, da nicht für natives Linux benötigt
+App.EnvironmentVariables={}
