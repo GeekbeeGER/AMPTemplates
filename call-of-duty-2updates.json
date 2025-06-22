@@ -4,9 +4,11 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://play-ground.li/files/cod2_amp_server.zip",
+        "UpdateSourceTarget": "serverfiles",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": false,
-        "UpdateSourceConditionValue": "",
+        "UpdateSourceConditionSetting": "WebspaceDownload",
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": true,
         "OneShot": true
     },
@@ -18,6 +20,8 @@
         "UpdateSourceTarget": "serverfiles/main/server.cfg",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
+        "UpdateSourceConditionSetting": "GitHubDownload",
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": false,
         "OneShot": true
     },

@@ -2,15 +2,8 @@
     {
         "Protocol": "UDP",
         "Port": "28960",
-        "Name": "Game Port",
+        "Name": "Main Game Port",
         "Description": "Port used for main game traffic",
-        "Ref": "GamePort"
-    },
-    {
-        "Protocol": "UDP",
-        "Port": "28960",
-        "Name": "Steam Query Port",
-        "Description": "Port used for main game traffic",
-        "Ref": "SteamQueryPort"
+        "Ref": "MainGamePort"
     }
 ]
