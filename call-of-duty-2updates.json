@@ -1,21 +1,26 @@
 [
     {
-        "UpdateStageName": "Download & Extract Serverfiles",
+        "UpdateStageName": "Serverfiles",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
-        "UpdateSourceTarget": "",
         "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionSetting": "WebspaceDownload",
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": true,
         "OneShot": true
     },
     {
-        "UpdateStageName": "Download default server.cfg",
+        "UpdateStageName": "Config File Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/GeekbeeGER/AMPTemplates/refs/heads/main/server.cfg",
         "UpdateSourceTarget": "main/server.cfg",
         "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionSetting": "GitHubDownload",
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": false,
         "OneShot": true
     },
@@ -25,7 +30,8 @@
         "UpdateSource": "SetExecutableFlag",
         "UpdateSourceArgs": "cod2_lnxded",
         "UnzipUpdateSource": false,
-        "DeleteAfterExtract": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
         "OneShot": true
     }
 ]
