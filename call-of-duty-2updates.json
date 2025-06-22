@@ -12,6 +12,6 @@
         "Data": "cod2.zip",
         "Target": "",
         "OneShot": true,
-        "DeleteAfterExtract": true
+        "DeleteAfterExtract": false  // <-- HIER DIE ÄNDERUNG!
     }
 ]
