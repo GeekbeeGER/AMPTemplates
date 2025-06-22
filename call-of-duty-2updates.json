@@ -1,6 +1,6 @@
 [
     {
-        "UpdateStageName": "Download & Extract Serverfiles",
+        "UpdateStageName": "Download & Extract Serverfiles (TEST)",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://play-ground.li/files/cod2_amp_server.zip",
@@ -10,29 +10,6 @@
         "UpdateSourceConditionSetting": "",
         "UpdateSourceConditionValue": "",
         "DeleteAfterExtract": true,
-        "OneShot": true
-    },
-    {
-        "UpdateStageName": "Download default server.cfg",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/GeekbeeGER/AMPTemplates/refs/heads/main/server.cfg",
-        "UpdateSourceTarget": "serverfiles/main/server.cfg",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "UpdateSourceConditionSetting": "",
-        "UpdateSourceConditionValue": "",
-        "DeleteAfterExtract": false,
-        "OneShot": true
-    },
-    {
-        "UpdateStageName": "Make Executable",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "serverfiles/cod2_lnxded",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
-        "OneShot": true
+        "OneShot": false
     }
 ]
