@@ -14,7 +14,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "libstdc++.so.5",
-        "UpdateSourceArgs": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
+        "UpdateSourceArgs": "/usr/lib/i386-linux-gnu/",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false,
