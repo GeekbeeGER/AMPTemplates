@@ -9,10 +9,10 @@
         "IsFlagArgument": false,
         "ParamFieldName": "sv_hostname",
         "IncludeInCommandLine": false,
-        "DefaultValue": "^2My ^1AMP ^7CoD2 Server Powerd by AMP",
-        "Placeholder": "^2My ^1AMP ^7CoD2 Server Powerd by AMP",
+        "DefaultValue": "^2My ^1AMP ^7CoD2 Server",
+        "Placeholder": "^2My ^1AMP ^7CoD2 Server",
         "Suffix": "",
-        "Hidden": true,
+        "Hidden": false,
         "SkipIfEmpty": false,
         "EnumValues": {}
     },
