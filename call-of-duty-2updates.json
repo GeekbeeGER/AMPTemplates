@@ -24,7 +24,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.5.0.7 {{$FullBaseDir}}libstdc++.so.5.0.7\"",
+        "UpdateSourceArgs": "-c \"ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.5.0.7 {{$FullBaseDir}}libstdc++.so.5\"",
         "SkipOnFailure": false
     },
     {
