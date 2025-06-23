@@ -1,33 +1,38 @@
 [
     {
-        "UpdateStageName": "Download CoD2-Archiv",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
-    },
-    {
-        "UpdateStageName": "Erstelle Symlink für System-Bibliothek",
+        "UpdateStageName": "CoD2 Server-Archiv Download",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "CreateSymlink",
-        "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
-        "UpdateSourceArgs": "libstdc++.so.5.0.7",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "http://play-ground.li/files/cod2.zip",
+        "UpdateSourceArgs": "cod2.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
-        "OneShot": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Executable",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "cod2_lnxded",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": false
+        "UpdateStageName": "CoD2 Server-Archiv Entpacken & Aufräumen",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"unzip -o {{$FullBaseDir}}cod2.zip -d {{$FullBaseDir}} && rm {{$FullBaseDir}}cod2.zip\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "System-Bibliothek Symlink Erstellen",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.5.0.7 {{$FullBaseDir}}libstdc++.so.5.0.7\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server-Datei ausführbar machen",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"chmod +x {{$FullBaseDir}}cod2_lnxded\"",
+        "SkipOnFailure": false
     }
 ]
