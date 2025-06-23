@@ -3,7 +3,7 @@
         "UpdateStageName": "Download und Entpacken des CoD2-Archivs",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
+        "UpdateSourceData": "http://play-ground.li/files/cod2.zip",
         "UnzipUpdateSource": true,
         "DeleteAfterExtract": true,
         "OverwriteExistingFiles": true,
@@ -15,17 +15,6 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"chmod +x {{$FullBaseDir}}cod2_lnxded\"",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Lade System-Bibliothek herunter",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://play-ground.li/files/libstdc++.so.5",
-        "UpdateSourceArgs": "libstdc++.so.5",
-        "UnzipUpdateSource": false,
-        "DeleteAfterExtract": false,
-        "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     }
 ]
