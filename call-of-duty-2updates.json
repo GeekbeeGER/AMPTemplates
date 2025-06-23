@@ -10,6 +10,16 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Lade und entpacke Kompatibilitätsbibliotheken",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "http://icculus.org/updates/cod/gcc3-libs.tar.bz2",
+        "UnzipUpdateSource": true,
+        "DeleteAfterExtract": true,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Mache Server-Datei ausführbar (via Shell)",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
