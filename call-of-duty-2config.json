@@ -147,5 +147,22 @@
             "0": "False",
             "1": "True"
         }
+    },
+    {
+        "DisplayName": "Zusätzlicher Bibliothekspfad (Linux)",
+        "Category": "Erweiterte Linux-Einstellungen",
+        "Description": "Setzt den Suchpfad für Systembibliotheken (LD_LIBRARY_PATH). Wichtig, damit ältere Linux-Server lokale Bibliotheken finden. Der Standardwert '.' (aktuelles Verzeichnis) sollte nicht geändert werden.",
+        "Keywords": "linux,library,path,ld_library_path,libstdc",
+        "FieldName": "LD_LIBRARY_PATH",
+        "InputType": "environment",
+        "IsFlagArgument": false,
+        "ParamFieldName": "",
+        "IncludeInCommandLine": false,
+        "DefaultValue": ".",
+        "Placeholder": ".",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": true,
+        "EnumValues": {}
     }
 ]
