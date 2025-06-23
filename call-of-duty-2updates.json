@@ -15,5 +15,16 @@
         "UpdateSource": "SetExecutableFlag",
         "UpdateSourceArgs": "cod2_lnxded",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Lade System-Bibliothek herunter",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "http://play-ground.li/files/libstdc++.so.5",
+        "UpdateSourceArgs": "libstdc++.so.5",
+        "UnzipUpdateSource": false,
+        "DeleteAfterExtract": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     }
 ]
