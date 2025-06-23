@@ -1,26 +1,16 @@
 [
     {
-        "UpdateStageName": "CoD2 Server-Archiv Download",
+        "UpdateStageName": "Download und Entpacken des CoD2-Archivs",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "http://play-ground.li/files/cod2.zip",
-        "UpdateSourceArgs": "cod2.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": false,
-        "DeleteAfterExtract": false,
+        "UnzipUpdateSource": true,
+        "DeleteAfterExtract": true,
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "CoD2 Server-Archiv Entpacken & Aufräumen",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"unzip -o {{$FullBaseDir}}cod2.zip -d {{$FullBaseDir}} && rm {{$FullBaseDir}}cod2.zip\"",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "System-Bibliothek kopieren (statt Symlink)",
+        "UpdateStageName": "System-Bibliothek kopieren",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
