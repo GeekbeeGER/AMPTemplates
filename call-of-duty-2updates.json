@@ -20,11 +20,12 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "System-Bibliothek Symlink Erstellen",
+        "UpdateStageName": "System-Bibliothek Kopieren",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"ln -sf /usr/lib/i386-linux-gnu/libstdc++.so.5.0.7 {{$FullBaseDir}}libstdc++.so.5\"",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
+        "UpdateSourceArgs": "{{$FullBaseDir}}libstdc++.so.5",
+        "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
     {
