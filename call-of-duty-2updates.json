@@ -10,12 +10,12 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "System-Bibliothek kopieren",
+        "UpdateStageName": "System-Bibliothek kopieren (via Shell)",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
-        "UpdateSourceArgs": "{{$FullBaseDir}}libstdc++.so.5",
-        "OverwriteExistingFiles": false,
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cp /usr/lib/i386-linux-gnu/libstdc++.so.5.0.7 {{$FullBaseDir}}libstdc++.so.5\"",
+        "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
     {
