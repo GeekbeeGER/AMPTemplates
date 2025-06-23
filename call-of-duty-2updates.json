@@ -10,13 +10,13 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Kopiere System-Bibliothek",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "libstdc++.so.5.0.7",
-        "UpdateSourceArgs": "/usr/lib/i386-linux-gnu/",
+        "UpdateStageName": "Erstelle Symlink für System-Bibliothek",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateSymlink",
+        "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
+        "UpdateSourceArgs": "libstdc++.so.5.0.7",
         "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
         "OneShot": true
     },
