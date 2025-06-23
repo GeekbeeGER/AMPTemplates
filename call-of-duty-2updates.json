@@ -10,10 +10,11 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Mache Server-Datei ausführbar",
+        "UpdateStageName": "Mache Server-Datei ausführbar (via Shell)",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "cod2_lnxded",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"chmod +x {{$FullBaseDir}}cod2_lnxded\"",
         "SkipOnFailure": false
     },
     {
