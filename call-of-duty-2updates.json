@@ -15,7 +15,7 @@
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
         "UpdateSourceArgs": "{{$FullBaseDir}}libstdc++.so.5",
-        "OverwriteExistingFiles": true,
+        "OverwriteExistingFiles": false,
         "SkipOnFailure": false
     },
     {
