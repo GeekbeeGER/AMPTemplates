@@ -10,7 +10,15 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Executable",
+        "UpdateStageName": "Kopiere System-Bibliothek (Robust)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cp /usr/lib/i386-linux-gnu/libstdc++.so.5 .\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Executable Flag Setzen",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SetExecutableFlag",
         "UpdateSourceArgs": "cod2_lnxded",
