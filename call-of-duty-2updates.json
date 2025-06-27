@@ -1,6 +1,6 @@
 [
     {
-        "UpdateStageName": "Download CoD2-Archiv",
+        "UpdateStageName": "Download und Entpacken",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
@@ -10,31 +10,11 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Erstelle Start-Skript",
+        "UpdateStageName": "Skript erstellen und Berechtigungen setzen",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"echo -e '#!/bin/bash\\nexport LD_LIBRARY_PATH=.\\n./cod2_lnxded \\\"$@\\\"' > start_cod2.sh\"",
+        "UpdateSourceArgs": "-c \"echo -e '#!/bin/bash\\nexport LD_LIBRARY_PATH=.\\n./cod2_lnxded \\\"$@\\\"' > start_cod2.sh && sleep 10 && chmod +x start_cod2.sh cod2_lnxded\"",
         "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Mache Start-Skript ausführbar",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "start_cod2.sh",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
-        "OneShot": false
-    },
-    {
-        "UpdateStageName": "Mache Spiel-Executable ausführbar",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "cod2_lnxded",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
-        "OneShot": false
     }
 ]
