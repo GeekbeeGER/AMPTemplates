@@ -10,11 +10,11 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Skript erstellen und Berechtigungen setzen",
+        "UpdateStageName": "Intelligentes Start-Skript erstellen und aktivieren",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"echo -e '#!/bin/bash\\nexport LD_LIBRARY_PATH=.\\n./cod2_lnxded \\\"$@\\\"' > start_cod2.sh && sleep 10 && chmod +x start_cod2.sh cod2_lnxded\"",
+        "UpdateSourceArgs": "-c \"echo -e '#!/bin/bash\\nchmod +x ./cod2_lnxded\\nexport LD_LIBRARY_PATH=.\\n./cod2_lnxded \\\"$@\\\"' > start_cod2.sh && chmod +x start_cod2.sh\"",
         "SkipOnFailure": false
     }
 ]
