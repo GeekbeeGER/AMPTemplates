@@ -10,7 +10,25 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Executable Flag Setzen",
+        "UpdateStageName": "Erstelle Start-Skript",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"echo -e '#!/bin/bash\\nexport LD_LIBRARY_PATH=.\\n./cod2_lnxded \\\"$@\\\"' > start_cod2.sh\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Mache Start-Skript ausführbar",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "start_cod2.sh",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Mache Spiel-Executable ausführbar",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SetExecutableFlag",
         "UpdateSourceArgs": "cod2_lnxded",
