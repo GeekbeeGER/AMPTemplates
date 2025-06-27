@@ -1,30 +1,43 @@
 [
     {
-        "UpdateStageName": "Download und Entpacken des CoD2-Archivs",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateStageName": "Download CoD2-Archiv",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "http://play-ground.li/files/cod2.zip",
+        "UpdateSourceData": "https://play-ground.li/files/cod2.zip",
         "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "OneShot": true
     },
     {
-        "UpdateStageName": "Lade und entpacke Kompatibilitätsbibliotheken",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "http://icculus.org/updates/cod/gcc3-libs.tar.bz2",
-        "UnzipUpdateSource": true,
-        "DeleteAfterExtract": true,
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "UpdateStageName": "Installiere Kompatibilitätsbibliotheken",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "InstallPackage",
+        "UpdateSourceData": "libstdc++5,libc6:i386",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": true
     },
     {
-        "UpdateStageName": "Mache Server-Datei ausführbar (via Shell)",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"chmod +x {{$FullBaseDir}}cod2_lnxded\"",
-        "SkipOnFailure": false
+        "UpdateStageName": "Kopiere System-Bibliothek",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "libstdc++.so.5",
+        "UpdateSourceArgs": "/usr/lib/i386-linux-gnu/libstdc++.so.5.0.7",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": true
+    },
+    {
+        "UpdateStageName": "Executable",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "cod2_lnxded",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
