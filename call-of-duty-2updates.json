@@ -10,16 +10,6 @@
         "OneShot": true
     },
     {
-        "UpdateStageName": "Installiere Kompatibilitätsbibliotheken",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "InstallPackage",
-        "UpdateSourceData": "libstdc++5,libc6:i386",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
-        "OneShot": true
-    },
-    {
         "UpdateStageName": "Kopiere System-Bibliothek",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
