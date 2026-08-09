@@ -1,0 +1,7 @@
+[
+    {
+        "ConfigFile": "Config/DedicatedServer.ini",
+        "ConfigType": "ini",
+        "AutoMap": true
+    }
+]

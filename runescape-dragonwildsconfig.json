@@ -1,0 +1,53 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "Server Settings",
+        "Description": "The name displayed in the server browser.",
+        "Keywords": "server,name",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerName",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "My Dragonwilds Server",
+        "Placeholder": "My Dragonwilds Server",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Default World Name",
+        "Category": "Server Settings",
+        "Description": "Name of the world created on first startup.",
+        "Keywords": "default,world,name",
+        "FieldName": "DefaultWorldName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "DefaultWorldName",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "DragonWorld",
+        "Placeholder": "DragonWorld",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "Server Security",
+        "Description": "Password for the Server Management screen in-game.",
+        "Keywords": "admin,password",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "AdminPassword",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    }
+]
