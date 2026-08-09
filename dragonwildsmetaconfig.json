@@ -1,0 +1,18 @@
+[
+	{
+		"ConfigFile": "RSDragonwilds/Saved/Config/LinuxServer/DedicatedServer.ini",
+		"ConfigType": "ini",
+		"Subsections": [
+			{
+				"Heading": "DedicatedServerSettings",
+				"SettingMappings": {
+					"OwnerId": "OwnerId",
+					"ServerName": "ServerName",
+					"DefaultWorldName": "DefaultWorldName",
+					"AdminPassword": "AdminPassword",
+					"WorldPassword": "WorldPassword"
+				}
+			}
+		]
+	}
+]
