@@ -22,26 +22,23 @@ App.MaxUsers=8
 App.AdminMethod=STDIO
 App.SteamUpdateAnonymousLogin=True
 App.RapidStartup=False
-# WICHTIG: cod2 hier nicht relevant - Dragonwilds legt DedicatedServer.ini erst beim allerersten
-# Start an. Deshalb wird der Server nach dem Download einmal automatisch gestartet, wartet auf den
-# Ready-Status und wird danach wieder heruntergefahren, damit die Config-Datei für AMP existiert
-# bevor Einstellungen gespeichert werden.
 App.UpdateSources=[{"UpdateStageName": "SteamCMD Download (AppID 4019830)", "UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "4019830"}, {"UpdateStageName": "Startskript ausführbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "RSDragonwildsServer.sh"}, {"UpdateStageName": "Ersten Start ausführen (generiert DedicatedServer.ini)", "UpdateSourcePlatform": "All", "UpdateSource": "StartApplication"}, {"UpdateStageName": "Auf Ready-Status warten", "UpdateSourcePlatform": "All", "UpdateSource": "WaitForStartupComplete"}, {"UpdateStageName": "Server wieder stoppen", "UpdateSourcePlatform": "All", "UpdateSource": "ShutdownApplication"}]
 
 ## --- Console ---
-# PLATZHALTER - unbedingt anhand der echten Konsolenausgabe nach einem manuellen Teststart
-# verifizieren, sonst bleibt AMP dauerhaft im Status "Starting".
 Console.AppReadyRegex=^.*(?:Server is ready|Listening on port|World .* loaded).*$
 
 ## --- Meta ---
-Meta.DisplayName=RuneScape: Dragonwilds
-Meta.OS=3
-Meta.AppConfigId=8763fd76-1ed5-4a10-9326-11510465a0e9
-Meta.Author=Community
-Meta.URL=https://dragonwilds.runescape.wiki/w/Dedicated_Servers
-Meta.DisplayImageSource=steam:4019830
-Meta.EndpointURIFormat=
-Meta.ConfigManifest=dragonwildsconfig.json
-Meta.MetaConfigManifest=dragonwildsmetaconfig.json
-Meta.ConfigRoot=dragonwilds.kvp
-Meta.ContainerPolicy=NoPreference
+GenericModule.Meta.DisplayName=RuneScape: Dragonwilds
+GenericModule.Meta.Description=RuneScape Dragonwilds Dedicated Server Template for AMP
+GenericModule.Meta.OS=Linux,Windows
+GenericModule.Meta.Arch=x86_64
+GenericModule.Meta.MinAMPVersion=2.3.0.0
+GenericModule.Meta.AppConfigId=8763fd76-1ed5-4a10-9326-11510465a0e9
+GenericModule.Meta.Author=Community
+GenericModule.Meta.URL=https://dragonwilds.runescape.wiki/w/Dedicated_Servers
+GenericModule.Meta.DisplayImageSource=steam:4019830
+GenericModule.Meta.EndpointURIFormat=
+GenericModule.Meta.ConfigManifest=dragonwildsconfig.json
+GenericModule.Meta.MetaConfigManifest=dragonwildsmetaconfig.json
+GenericModule.Meta.ConfigRoot=dragonwilds.kvp
+GenericModule.Meta.ContainerPolicy=NoPreference
