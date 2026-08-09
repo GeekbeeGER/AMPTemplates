@@ -1,6 +1,7 @@
 ####################################
 # RuneScape: Dragonwilds - AMP Generic Module Template
 # Bezugsquelle: SteamCMD (AppID 4019830, anonymer Login)
+# Offizielle Referenz: https://dragonwilds.runescape.wiki/w/Dedicated_Servers/Linux
 ####################################
 
 ## --- Application ---
@@ -22,7 +23,8 @@ App.MaxUsers=8
 App.AdminMethod=STDIO
 App.SteamUpdateAnonymousLogin=True
 App.RapidStartup=False
-App.UpdateSources=[{"UpdateStageName": "SteamCMD Download (AppID 4019830)", "UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "4019830"}, {"UpdateStageName": "Startskript ausführbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "RSDragonwildsServer.sh"}, {"UpdateStageName": "Ersten Start ausführen (generiert DedicatedServer.ini)", "UpdateSourcePlatform": "All", "UpdateSource": "StartApplication"}, {"UpdateStageName": "Auf Ready-Status warten", "UpdateSourcePlatform": "All", "UpdateSource": "WaitForStartupComplete"}, {"UpdateStageName": "Server wieder stoppen", "UpdateSourcePlatform": "All", "UpdateSource": "ShutdownApplication"}]
+# Aktualisierungs- und Start-Stages gemäß offiziellem Linux-Guide
+App.UpdateSources=[{"UpdateStageName": "SteamCMD Download (AppID 4019830)", "UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "4019830"}, {"UpdateStageName": "Startskript ausfuehrbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "RSDragonwildsServer.sh"}, {"UpdateStageName": "Ersten Start ausfuehren (generiert DedicatedServer.ini)", "UpdateSourcePlatform": "All", "UpdateSource": "StartApplication"}, {"UpdateStageName": "Auf Ready-Status warten", "UpdateSourcePlatform": "All", "UpdateSource": "WaitForStartupComplete"}, {"UpdateStageName": "Server wieder stoppen", "UpdateSourcePlatform": "All", "UpdateSource": "ShutdownApplication"}]
 
 ## --- Console ---
 Console.AppReadyRegex=^.*(?:Server is ready|Listening on port|World .* loaded).*$
