@@ -1,0 +1,22 @@
+[
+	{
+		"ConfigFile": "mods/bfvietnam/settings/serversettings.con",
+		"ConfigType": "kvp",
+		"ConfigFormat": "{0} \"{1}\"",
+		"Subsections": [
+			{
+				"Heading": "$root",
+				"SettingMappings": {
+					"ServerName": "game.serverName",
+					"ServerPassword": "game.serverPassword",
+					"MaxPlayers": "game.serverMaxPlayers",
+					"ServerPort": "game.serverPort",
+					"GameType": "game.gameType",
+					"TimeLimit": "game.timeLimit",
+					"TicketRatio": "game.ticketRatio",
+					"SpectatorsAllowed": "game.serverAllowSpectators"
+				}
+			}
+		]
+	}
+]

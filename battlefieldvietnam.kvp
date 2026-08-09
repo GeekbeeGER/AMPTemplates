@@ -1,0 +1,54 @@
+####################################
+# Battlefield Vietnam - AMP Generic Module Template
+# Bezugsquelle: LinuxGSM Mirror (bfv_linded v1.21)
+# Referenz: offizielles LinuxGSM bfvserver-Modul (engine: refractor)
+####################################
+
+## --- Application ---
+App.DisplayName=Battlefield Vietnam Dedicated Server
+App.RootDir=
+App.WorkingDir=
+App.ExecutableLinux=start.sh
+App.ExecutableWin=
+App.Compatibility=1
+# start.sh ist ein Wrapper-Skript um den eigentlichen bfv_linded Prozess.
+# statusMonitor 1 aktiviert die interaktive Konsole, die AMP als STDIO nutzt.
+App.CommandLineArgs=+statusMonitor 1 {{$FormattedArgs}}
+App.MonitorChildProcessName=^.*bfv_linded.*$
+App.ExitMethod=String
+App.ExitString=quit
+App.HasWriteableConsole=True
+App.HasReadableConsole=True
+App.ApplicationIPBinding=0.0.0.0
+App.ForceIPBinding=False
+App.SupportsIPv6=False
+App.ApplicationPort1=15567
+App.ApplicationPort2=23000
+App.MaxUsers=32
+App.AdminMethod=STDIO
+App.SteamUpdateAnonymousLogin=False
+App.RapidStartup=False
+# HINWEIS: Battlefield Vietnam wird als .tar.xz ausgeliefert. AMPs eingebautes
+# UnzipUpdateSource unterstützt zuverlässig zip/tar.gz/tar.bz2 - xz-Unterstützung
+# ist nicht garantiert. Falls das Entpacken fehlschlägt, entweder manuell einmalig
+# entpacken oder eine zusätzliche "Executable"-Update-Stage mit "tar -xf" einbauen.
+App.UpdateSources=[{"UpdateStageName": "Download Battlefield Vietnam (LinuxGSM mirror)", "UpdateSourcePlatform": "Linux", "UpdateSource": "FetchURL", "UpdateSourceData": "http://linuxgsm.download/BattlefieldVietnam/bfv_linded-v1.21-20041207_patch.tar.xz", "UnzipUpdateSource": true, "OverwriteExistingFiles": true}, {"UpdateStageName": "start.sh ausführbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "start.sh"}, {"UpdateStageName": "bfv_linded ausführbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "bfv_linded"}]
+
+## --- Console ---
+# PLATZHALTER - anhand der echten Konsolenausgabe nach einem manuellen Teststart verifizieren.
+Console.AppReadyRegex=^.*(?:GameSpy|Server Initialization Complete|entering main loop).*$
+Console.UserJoinRegex=^.*?(?<username>.+?)\s+has joined the game\.$
+Console.UserLeaveRegex=^.*?(?<username>.+?)\s+has left the game\.$
+
+## --- Meta ---
+Meta.DisplayName=Battlefield Vietnam
+Meta.OS=2
+Meta.AppConfigId=7ecbb6b7-44ef-402b-a4e0-8a6c0a7db1c1
+Meta.Author=Community
+Meta.URL=https://linuxgsm.com/servers/bfvserver/
+Meta.DisplayImageSource=none:
+Meta.EndpointURIFormat=
+Meta.ConfigManifest=battlefieldvietnamconfig.json
+Meta.MetaConfigManifest=battlefieldvietnammetaconfig.json
+Meta.ConfigRoot=battlefieldvietnam.kvp
+Meta.ContainerPolicy=NoPreference
