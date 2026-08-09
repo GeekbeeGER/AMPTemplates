@@ -1,47 +1,48 @@
 ####################################
-# RuneScape: Dragonwilds - AMP Generic Module Template
-# Bezugsquelle: SteamCMD (AppID 4019830, anonymer Login)
+# Dragonwilds - AMP Generic Module Template
+# Referenz: Angepasst für AMP Generic Module
 ####################################
 
 ## --- Application ---
-App.DisplayName=RuneScape: Dragonwilds Dedicated Server
+App.DisplayName=Dragonwilds Dedicated Server
 App.RootDir=
 App.WorkingDir=
-App.ExecutableLinux=RSDragonwildsServer.sh
-App.ExecutableWin=RSDragonwildsServer.exe
+App.ExecutableLinux=
+App.ExecutableWin=
 App.Compatibility=1
-App.CommandLineArgs=-log -NewConsole -Port={{$ApplicationPort1}} {{$FormattedArgs}}
-App.ExitMethod=SIGTERM
-App.HasWriteableConsole=False
+App.CommandLineArgs=
+App.MonitorChildProcessName=
+App.ExitMethod=String
+App.ExitString=quit
+App.HasWriteableConsole=True
 App.HasReadableConsole=True
 App.ApplicationIPBinding=0.0.0.0
 App.ForceIPBinding=False
 App.SupportsIPv6=False
 App.ApplicationPort1=7777
-App.MaxUsers=8
+App.ApplicationPort2=27015
+App.MaxUsers=16
 App.AdminMethod=STDIO
-App.SteamUpdateAnonymousLogin=True
+App.SteamUpdateAnonymousLogin=False
 App.RapidStartup=False
-# WICHTIG: cod2 hier nicht relevant - Dragonwilds legt DedicatedServer.ini erst beim allerersten
-# Start an. Deshalb wird der Server nach dem Download einmal automatisch gestartet, wartet auf den
-# Ready-Status und wird danach wieder heruntergefahren, damit die Config-Datei für AMP existiert
-# bevor Einstellungen gespeichert werden.
-App.UpdateSources=[{"UpdateStageName": "SteamCMD Download (AppID 4019830)", "UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "4019830"}, {"UpdateStageName": "Startskript ausführbar machen", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "RSDragonwildsServer.sh"}, {"UpdateStageName": "Ersten Start ausführen (generiert DedicatedServer.ini)", "UpdateSourcePlatform": "All", "UpdateSource": "StartApplication"}, {"UpdateStageName": "Auf Ready-Status warten", "UpdateSourcePlatform": "All", "UpdateSource": "WaitForStartupComplete"}, {"UpdateStageName": "Server wieder stoppen", "UpdateSourcePlatform": "All", "UpdateSource": "ShutdownApplication"}]
+App.UpdateSources=[]
 
 ## --- Console ---
-# PLATZHALTER - unbedingt anhand der echten Konsolenausgabe nach einem manuellen Teststart
-# verifizieren, sonst bleibt AMP dauerhaft im Status "Starting".
-Console.AppReadyRegex=^.*(?:Server is ready|Listening on port|World .* loaded).*$
+Console.AppReadyRegex=^.*Server Initialization Complete.*$
+Console.UserJoinRegex=^.*?(?<username>.+?)\s+joined.*$
+Console.UserLeaveRegex=^.*?(?<username>.+?)\s+left.*$
 
 ## --- Meta ---
-Meta.DisplayName=RuneScape: Dragonwilds
-Meta.OS=3
-Meta.AppConfigId=8763fd76-1ed5-4a10-9326-11510465a0e9
-Meta.Author=Community
-Meta.URL=https://dragonwilds.runescape.wiki/w/Dedicated_Servers
-Meta.DisplayImageSource=steam:4019830
-Meta.EndpointURIFormat=
-Meta.ConfigManifest=dragonwildsconfig.json
-Meta.MetaConfigManifest=dragonwildsmetaconfig.json
-Meta.ConfigRoot=dragonwilds.kvp
-Meta.ContainerPolicy=NoPreference
+GenericModule.Meta.DisplayName=Dragonwilds
+GenericModule.Meta.Description=Dragonwilds Dedicated Server Template for AMP
+GenericModule.Meta.OS=Linux
+GenericModule.Meta.Arch=x86_64
+GenericModule.Meta.MinAMPVersion=2.3.0.0
+GenericModule.Meta.AppConfigId=8fbc2a15-938b-4b2a-8c10-b219e4a3df12
+GenericModule.Meta.Author=GeekbeeGER
+GenericModule.Meta.URL=https://github.com/GeekbeeGER/AMPTemplates
+GenericModule.Meta.DisplayImageSource=none:
+GenericModule.Meta.ConfigManifest=dragonwildsconfig.json
+GenericModule.Meta.MetaConfigManifest=dragonwildsmetaconfig.json
+GenericModule.Meta.ConfigRoot=dragonwilds.kvp
+GenericModule.Meta.ContainerPolicy=NoPreference
