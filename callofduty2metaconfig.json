@@ -1,0 +1,22 @@
+[
+	{
+		"ConfigFile": "main/server.cfg",
+		"ConfigType": "kvp",
+		"ConfigFormat": "seta {0} \"{1}\"",
+		"Subsections": [
+			{
+				"Heading": "$root",
+				"SettingMappings": {
+					"Hostname": "sv_hostname",
+					"RconPassword": "rconpassword",
+					"ServerPassword": "g_password",
+					"Gametype": "g_gametype",
+					"Fraglimit": "fraglimit",
+					"Timelimit": "timelimit",
+					"AllowDownload": "sv_allowdownload",
+					"PunkBuster": "sv_punkbuster"
+				}
+			}
+		]
+	}
+]

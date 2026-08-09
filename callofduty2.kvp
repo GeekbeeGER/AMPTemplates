@@ -1,0 +1,48 @@
+####################################
+# Call of Duty 2 - AMP Generic Module Template
+# Bezugsquelle: LinuxGSM Mirror (cod2-lnxded 1.3 full)
+####################################
+
+## --- Application ---
+App.DisplayName=Call of Duty 2 Dedicated Server
+App.RootDir=
+App.WorkingDir=
+App.ExecutableLinux=cod2_lnxded
+App.ExecutableWin=
+App.Compatibility=1
+App.CommandLineArgs=+set fs_basepath "{{$RootDir}}" +set fs_homepath "{{$RootDir}}" +set fs_game main +set dedicated 2 +set net_port {{$ApplicationPort1}} +set net_ip {{$IP}} +set sv_maxclients {{$MaxUsers}} +exec server.cfg {{$FormattedArgs}}
+App.ExitMethod=String
+App.ExitString=quit
+App.HasWriteableConsole=True
+App.HasReadableConsole=True
+App.IgnoreSTDOUTAfterRCON=False
+App.ApplicationIPBinding=0.0.0.0
+App.ForceIPBinding=False
+App.SupportsIPv6=False
+App.ApplicationPort1=28960
+App.RemoteAdminPort=28960
+App.MaxUsers=18
+App.AdminMethod=STDIO
+App.SteamUpdateAnonymousLogin=False
+App.RapidStartup=True
+App.UpdateSources=[{"UpdateStageName": "Download Call of Duty 2 Dedicated Server (LinuxGSM mirror)", "UpdateSourcePlatform": "Linux", "UpdateSource": "FetchURL", "UpdateSourceData": "http://files.linuxgsm.com/CallOfDuty2/cod2-lnxded-1.3-full.tar.bz2", "UnzipUpdateSource": true, "OverwriteExistingFiles": true}, {"UpdateStageName": "cod2_lnxded als ausführbar markieren", "UpdateSourcePlatform": "Linux", "UpdateSource": "SetExecutableFlag", "UpdateSourceArgs": "cod2_lnxded"}]
+
+## --- Console ---
+# ACHTUNG: Diese Regex ist ein Platzhalter und muss anhand der echten Konsolenausgabe
+# deines Servers (nach dem ersten manuellen Start) verifiziert/angepasst werden.
+Console.AppReadyRegex=^.*(?:Server Initialization Complete|Hunk_Clear|not ready yet).*$
+Console.UserJoinRegex=^.*?(?<username>.+?)\s+entered the game\.$
+Console.UserLeaveRegex=^.*?(?<username>.+?)\s+disconnected\.$
+
+## --- Meta ---
+Meta.DisplayName=Call of Duty 2
+Meta.OS=2
+Meta.AppConfigId=5db7563b-fafd-41ee-8de0-4a6ec68f130a
+Meta.Author=Community
+Meta.URL=https://linuxgsm.com/servers/cod2server/
+Meta.DisplayImageSource=none:
+Meta.EndpointURIFormat=
+Meta.ConfigManifest=callofduty2config.json
+Meta.MetaConfigManifest=callofduty2metaconfig.json
+Meta.ConfigRoot=callofduty2.kvp
+Meta.ContainerPolicy=NoPreference

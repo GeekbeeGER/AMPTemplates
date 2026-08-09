@@ -1,0 +1,115 @@
+[
+	{
+		"DisplayName": "Server Name",
+		"Description": "Name des Servers, wie er im Serverbrowser erscheint.",
+		"FieldName": "Hostname",
+		"InputType": "text",
+		"Category": "General",
+		"IncludeInCommandLine": false,
+		"DefaultValue": "My CoD2 Server"
+	},
+	{
+		"DisplayName": "RCON Passwort",
+		"Description": "Passwort für die Remote-Administration (RCON).",
+		"FieldName": "RconPassword",
+		"InputType": "RandomPassword",
+		"Category": "General",
+		"IncludeInCommandLine": false,
+		"DefaultValue": ""
+	},
+	{
+		"DisplayName": "Server Passwort",
+		"Description": "Passwort, das Spieler zum Beitreten benötigen. Leer lassen für einen öffentlichen Server.",
+		"FieldName": "ServerPassword",
+		"InputType": "password",
+		"Category": "General",
+		"IncludeInCommandLine": false,
+		"DefaultValue": ""
+	},
+	{
+		"DisplayName": "Startkarte",
+		"Description": "Die Karte, mit der der Server startet.",
+		"FieldName": "StartMap",
+		"InputType": "enum",
+		"Category": "Gameplay",
+		"IncludeInCommandLine": false,
+		"EnumValues": {
+			"mp_toujane": "Toujane",
+			"mp_matmata": "Matmata",
+			"mp_leningrad": "Leningrad",
+			"mp_railyard": "Railyard",
+			"mp_breakthrough": "Breakthrough",
+			"mp_decoy": "Decoy",
+			"mp_downtown": "Downtown",
+			"mp_burgundy": "Burgundy",
+			"mp_dawnville": "Dawnville",
+			"mp_carentan": "Carentan"
+		},
+		"DefaultValue": "mp_toujane"
+	},
+	{
+		"DisplayName": "Spielmodus",
+		"Description": "Der Standard-Spielmodus (Gametype).",
+		"FieldName": "Gametype",
+		"InputType": "enum",
+		"Category": "Gameplay",
+		"IncludeInCommandLine": false,
+		"EnumValues": {
+			"dm": "Free For All",
+			"war": "Team Deathmatch",
+			"sd": "Search & Destroy",
+			"dom": "Domination",
+			"koth": "Headquarters",
+			"rounds": "Round Based Match"
+		},
+		"DefaultValue": "war"
+	},
+	{
+		"DisplayName": "Fraglimit",
+		"Description": "Anzahl der Kills, bei der die Runde/Map endet (0 = deaktiviert).",
+		"FieldName": "Fraglimit",
+		"InputType": "number",
+		"Category": "Gameplay",
+		"IncludeInCommandLine": false,
+		"minValue": "0",
+		"maxValue": "1000",
+		"DefaultValue": "30"
+	},
+	{
+		"DisplayName": "Timelimit (Minuten)",
+		"Description": "Rundenzeit in Minuten (0 = deaktiviert).",
+		"FieldName": "Timelimit",
+		"InputType": "number",
+		"Category": "Gameplay",
+		"IncludeInCommandLine": false,
+		"minValue": "0",
+		"maxValue": "180",
+		"DefaultValue": "20"
+	},
+	{
+		"DisplayName": "Downloads von Karten/Assets erlauben",
+		"Description": "Erlaubt Clients, fehlende Custom-Maps/Assets vom Server herunterzuladen.",
+		"FieldName": "AllowDownload",
+		"InputType": "checkbox",
+		"Category": "Server",
+		"IncludeInCommandLine": false,
+		"EnumValues": {
+			"False": "0",
+			"True": "1"
+		},
+		"DefaultValue": "True"
+	},
+	{
+		"DisplayName": "PunkBuster aktivieren",
+		"Description": "Aktiviert den PunkBuster Anti-Cheat-Dienst auf dem Server.",
+		"FieldName": "PunkBuster",
+		"InputType": "checkbox",
+		"Category": "Server",
+		"IncludeInCommandLine": false,
+		"EnumValues": {
+			"False": "0",
+			"True": "1"
+		},
+		"DefaultValue": "True"
+	}
+]
